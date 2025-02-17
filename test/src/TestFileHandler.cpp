@@ -37,8 +37,8 @@ TEST(TestFileHandler, RemoveFileToCompare) {
 }
 TEST(TestFileHandler, CompareListOfFilesDifferent) {
     FileHandler myFileHandler;
-    CompareFile myFile1("/root/repo/ComparePro/README.md");
-    CompareFile myFile2("/root/repo/ComparePro/README.md");
+    CompareFile myFile1("../README.md");
+    CompareFile myFile2("../README.md");
     myFileHandler.addFileToCompare(myFile1);
     myFileHandler.addFileToCompare(myFile2);
     std::vector<CompareFile> myFiles;
@@ -48,8 +48,8 @@ TEST(TestFileHandler, CompareListOfFilesDifferent) {
 
 TEST(TestFileHandler, CompareListOfFilesSame) {
     FileHandler myFileHandler;
-    CompareFile myFile1("/root/repo/ComparePro/README.md");
-    CompareFile myFile2("/root/repo/ComparePro/CMakeLists.txt");
+    CompareFile myFile1("../README.md");
+    CompareFile myFile2("../CMakeLists.txt");
     myFileHandler.addFileToCompare(myFile1);
     myFileHandler.addFileToCompare(myFile2);
     std::vector<CompareFile> myFiles;

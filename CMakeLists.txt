@@ -34,10 +34,3 @@ enable_testing()
 add_library(${PROJECT_NAME}_lib STATIC ${CompareProSources})
 add_executable(TestExecutable ${TestSources})
 target_link_libraries(TestExecutable ${PROJECT_NAME}_lib ${CMAKE_DL_LIBS} gtest_main)
-
-# Run tests after build
-add_custom_target(run_tests
-  COMMAND ${CMAKE_CTEST_COMMAND}
-  DEPENDS TestExecutable
-  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-)
