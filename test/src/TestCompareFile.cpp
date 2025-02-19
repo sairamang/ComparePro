@@ -4,7 +4,7 @@
 class CompareFileCreation : public testing::Test {
 protected:
     CompareFileCreation() {
-        myFile = std::make_shared<CompareFile>("/root/repo/ComparePro/out.txt");
+        myFile = std::make_shared<CompareFile>("../README.md");
     }
     ~CompareFileCreation() {
 
@@ -13,5 +13,5 @@ protected:
 };
 
 TEST_F(CompareFileCreation, CompareFile) {
-    EXPECT_EQ(myFile->getFilePath(), "/root/repo/ComparePro/out.txt");
+    EXPECT_EQ(myFile->getFilePath(), "../README.md");
 }
