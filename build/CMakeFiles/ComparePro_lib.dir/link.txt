@@ -1,0 +1,2 @@
+/usr/bin/ar qc libComparePro_lib.a CMakeFiles/ComparePro_lib.dir/src/Utils/Utils.cpp.o CMakeFiles/ComparePro_lib.dir/src/FileHandler/FileHandler.cpp.o CMakeFiles/ComparePro_lib.dir/src/CompareFile/CompareFile.cpp.o CMakeFiles/ComparePro_lib.dir/src/Comparator/Comparator.cpp.o
+/usr/bin/ranlib libComparePro_lib.a

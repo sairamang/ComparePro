@@ -1,0 +1,60 @@
+Start testing: Feb 20 00:28 IST
+----------------------------------------------------------
+1/1 Testing: TestExecutable
+1/1 Test: TestExecutable
+Command: "/root/repo/ComparePro/build/TestExecutable"
+Directory: /root/repo/ComparePro/build
+"TestExecutable" start time: Feb 20 00:28 IST
+Output:
+----------------------------------------------------------
+Running main() from /root/repo/ComparePro/test/googletest/googletest/src/gtest_main.cc
+[==========] Running 10 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from SampleTestSuite
+[ RUN      ] SampleTestSuite.TestFunction
+Gtest Working Fine
+[       OK ] SampleTestSuite.TestFunction (0 ms)
+[----------] 1 test from SampleTestSuite (0 ms total)
+
+[----------] 3 tests from TestUtils
+[ RUN      ] TestUtils.ValidFileTest
+[       OK ] TestUtils.ValidFileTest (0 ms)
+[ RUN      ] TestUtils.InValidFileTest
+[       OK ] TestUtils.InValidFileTest (0 ms)
+[ RUN      ] TestUtils.PrintUsage
+Usage : ./comparepro [Options] file1 file2
+[       OK ] TestUtils.PrintUsage (0 ms)
+[----------] 3 tests from TestUtils (0 ms total)
+
+[----------] 1 test from CompareFileCreation
+[ RUN      ] CompareFileCreation.CompareFile
+[       OK ] CompareFileCreation.CompareFile (0 ms)
+[----------] 1 test from CompareFileCreation (0 ms total)
+
+[----------] 5 tests from TestFileHandler
+[ RUN      ] TestFileHandler.FileHandlerCreation
+[       OK ] TestFileHandler.FileHandlerCreation (0 ms)
+[ RUN      ] TestFileHandler.AddFileToCompare
+[       OK ] TestFileHandler.AddFileToCompare (0 ms)
+[ RUN      ] TestFileHandler.RemoveFileToCompare
+[       OK ] TestFileHandler.RemoveFileToCompare (0 ms)
+[ RUN      ] TestFileHandler.CompareListOfFilesDifferent
+Comparing ../README.md ../README.md 1
+[       OK ] TestFileHandler.CompareListOfFilesDifferent (0 ms)
+[ RUN      ] TestFileHandler.CompareListOfFilesSame
+Comparing ../README.md ../CMakeLists.txt 0
+[       OK ] TestFileHandler.CompareListOfFilesSame (0 ms)
+[----------] 5 tests from TestFileHandler (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 4 test suites ran. (1 ms total)
+[  PASSED  ] 10 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestExecutable" end time: Feb 20 00:28 IST
+"TestExecutable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 20 00:28 IST
