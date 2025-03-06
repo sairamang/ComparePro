@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/ComparePro.dir/src/main.cpp.o CMakeFiles/ComparePro.dir/src/Utils/Utils.cpp.o CMakeFiles/ComparePro.dir/src/FileHandler/FileHandler.cpp.o CMakeFiles/ComparePro.dir/src/CompareFile/CompareFile.cpp.o CMakeFiles/ComparePro.dir/src/Comparator/Comparator.cpp.o -o ComparePro  -ldl 
