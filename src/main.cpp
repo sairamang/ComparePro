@@ -3,9 +3,11 @@
 #include "CompareFile.h"
 #include "Comparator.h"
 #include "FileHandler.h"
+#include "FileDisplay.h"
 int main(int argc, char** argv) {
     if (argc <=2) {
         std::cout<<"Too few arguments"<<std::endl;
+        Utils::printUsage();
         return 0;
     }
 
@@ -30,5 +32,11 @@ int main(int argc, char** argv) {
 
     myFileHandler.compareListOfFiles();
 
+    FileDisplayConf myConf;
+    myConf.width = 720;
+    myConf.breadth = 640;
+    FileDisplay myFileDisplay(myConf);
+    myFileDisplay.start();
+    myFileDisplay.stop();
     return 0;
 }

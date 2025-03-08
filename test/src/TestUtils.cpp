@@ -9,3 +9,12 @@ TEST(TestUtils, InValidFileTest) {
 TEST(TestUtils, PrintUsage) {
     Utils::printUsage();
 }
+
+TEST(TestUtils, ListFilesInDirectory) {
+    Utils::ListCurrentFilesinDirectory("./");
+    Utils::ListCurrentFilesinDirectory("/root/");
+}
+
+TEST(TestUtils, getCurrentWorkingDirectory) {
+    std::cout<<"Get Current working dir"<<Utils::getCurrentWorkingDirectory()<<std::endl;
+}
