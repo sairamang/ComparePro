@@ -10,11 +10,15 @@
 */
 
 TEST(TestFileDisplay, InitializeFileDisplay) {
-    FileDisplay myfileDisplay;
-    EXPECT_NE(&myfileDisplay, nullptr);
+    FileDisplay myFileDisplay({720, 640});
 }
 
-TEST(TestFileDisplay, DestroyFileDisplay) {
-    FileDisplay* myFileDisplay_handle = new FileDisplay();
-    
+TEST(TestFileDisplay, StartFileDisplay) {
+    FileDisplay myFileDisplay({720,640});
+    myFileDisplay.start();
+    int count = 0;
+    while(count < 10) {
+        sleep(1);
+        count++;
+    }
 }
