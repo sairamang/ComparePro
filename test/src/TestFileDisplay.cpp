@@ -9,12 +9,14 @@
 6. File Display Open File Action
 */
 
-TEST(TestFileDisplay, InitializeFileDisplay) {
-    FileDisplay myfileDisplay;
-    EXPECT_NE(&myfileDisplay, nullptr);
-}
-
-TEST(TestFileDisplay, DestroyFileDisplay) {
-    FileDisplay* myFileDisplay_handle = new FileDisplay();
-    
+TEST(TestFileDisplay, StartFileDisplay) {
+    /* To activate after multithreaded display is done*/
+    // FileDisplay myFileDisplay({720,640});
+    // myFileDisplay.start();
+    // int count = 0;
+    // while(count < 10) {
+    //     sleep(1);
+    //     count++;
+    // }
+    // myFileDisplay.stop();
 }

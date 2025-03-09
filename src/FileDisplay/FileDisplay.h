@@ -15,6 +15,7 @@
 
 //ComparePro
 #include "Utils/Utils.h"
+#include "LoadFileWindow/LoadFileWindow.h"
 
 
 struct FileDisplayConf {
@@ -30,14 +31,17 @@ class FileDisplay {
     private:
         void imgui_render();
         void imgui_frame_init();
-        void imgui_opengl_init();
-        void imgui_glfw_init();
+        void imgui_set_context();
+        bool imgui_glfw_init();
+        void imgui_glfw_set_version();
+        bool imgui_glfw_create_window();
+        void imgui_set_style();
         void imgui_opengl_destroy();
         void imgui_glfw_destroy();
         void filedisplaywindow();
-        void loadfilewindow(bool& loadfilebutton, int id);
         FileDisplayConf m_fileDisplayConf;
         GLFWwindow* window;
         ImVec4 clear_color;
         const char *m_glsl_version;
+        LoadFileWindow m_load_file_window;
 };
