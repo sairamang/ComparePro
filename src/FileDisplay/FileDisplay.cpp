@@ -4,7 +4,10 @@ FileDisplay::FileDisplay(FileDisplayConf myConf)
 {
     m_fileDisplayConf = myConf;
     imgui_glfw_init();
-    imgui_opengl_init();
+    imgui_glfw_set_version();
+    imgui_glfw_create_window();
+    imgui_set_context();
+    imgui_set_style();
 }
 void FileDisplay::imgui_glfw_init()
 {
@@ -14,10 +17,13 @@ void FileDisplay::imgui_glfw_init()
         printf("GLFW Init Failed \n");
         return;
     }
+}
+void FileDisplay::imgui_glfw_set_version() {
     m_glsl_version = "#version 130";
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-
+}
+void FileDisplay::imgui_glfw_create_window() {
     // Create window with graphics context
     window = glfwCreateWindow(1280, 720, "ComparePro", nullptr, nullptr);
     if (window == nullptr)
@@ -25,12 +31,11 @@ void FileDisplay::imgui_glfw_init()
         printf("Error Creating GLFW Window \n");
         return;
     }
-
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1); // Enable vsync
 }
 
-void FileDisplay::imgui_opengl_init()
+void FileDisplay::imgui_set_context()
 {
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
@@ -39,7 +44,9 @@ void FileDisplay::imgui_opengl_init()
     (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;  // Enable Gamepad Controls
-
+    
+}
+void FileDisplay::imgui_set_style() {
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);

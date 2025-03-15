@@ -1,6 +1,8 @@
 # ComparePro
 Desktop Application to provide Comparison between Files
 
+## Supported OS
+ - Ubuntu 22.04
 ## Prerequisites
 - CMake
 - glfw
@@ -23,7 +25,7 @@ Desktop Application to provide Comparison between Files
 ```
     mkdir build
     cd build
-    cmake -DTEST=1
+    cmake -DTEST=1 ..
     make
 ```
 
