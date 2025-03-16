@@ -19,4 +19,13 @@ class LoadFileWindow {
     public:
         LoadFileWindow();
         void run(int id);
+    private:
+        std::string curr_dir;
+        std::string pressed_str;
+        std::vector<std::string> my_vec;
+        std::vector<bool> my_vec_bool;
+        void load_file_window_get_curr_dir();
+        void load_file_window_up_dir();
+        void load_file_window_load_folders();
+        void load_file_window_find_file_or_directory();
 };

@@ -31,8 +31,11 @@ class FileDisplay {
     private:
         void imgui_render();
         void imgui_frame_init();
-        void imgui_opengl_init();
-        void imgui_glfw_init();
+        void imgui_set_context();
+        bool imgui_glfw_init();
+        void imgui_glfw_set_version();
+        bool imgui_glfw_create_window();
+        void imgui_set_style();
         void imgui_opengl_destroy();
         void imgui_glfw_destroy();
         void filedisplaywindow();
